@@ -13,6 +13,10 @@ bot = Bot(token=TELEGRAM_TOKEN)
 dp = Dispatcher(bot)
 
 
+def plus(a, b):
+    return a + b
+
+
 def menu():
     keyboard = types.InlineKeyboardMarkup(row_width=2)
     button_start = [types.InlineKeyboardButton(text="Все должники",
@@ -76,3 +80,5 @@ async def get_menu_press(callback: types.CallbackQuery):
 
 if __name__ == '__main__':
     executor.start_polling(dp, skip_updates=True)
+    print(plus(2, 2))
+    print_hi('PyCharm')
